@@ -4,14 +4,14 @@ Calentar <- function(x){
   }else if(x=="pan cortado"){
     return("pan tostado")
   }else{
-    return(paste("No sé que hacer con ",x))
+    return(paste("No sÃ© que hacer con ",x))
   }
 }
 
 Preparar <- function(x,y){
   if(x=="naranjas cortadas"){
     return("jugo de naranjas")
-  }else if((x=="masa de panqueques" && y=="sartén caliente")||(y=="masa de panqueques" && x=="sartén caliente")){
+  }else if((x=="masa de panqueques" && y=="sartÃ©n caliente")||(y=="masa de panqueques" && x=="sartÃ©n caliente")){
     return("panqueques")
   }else if((x=="harina" && y=="huevos")||(y=="harina" && x=="huevos")){
     return("masa de panqueques")
@@ -26,7 +26,7 @@ Rellenar <- function(x){
   if(x=="panqueques"){
     return("panqueques con manjar")
   }else{
-    return(paste("No sé que hacer con ",x)) 
+    return(paste("No sÃ© que hacer con ",x)) 
   }
 }
 
@@ -34,7 +34,7 @@ Moler <- function(x){
   if(x=="palta cortada"){
     return("palta molida")
   }else{
-    return(paste("No sé que hacer con ",x))
+    return(paste("No sÃ© que hacer con ",x))
   }
 }
 
@@ -46,18 +46,32 @@ Cortar <- function(x){
   }else if(x=="palta"){
     return("palta cortada")
   }else{
-    return(paste("No sé que hacer con ",x))
+    return(paste("No sÃ© que hacer con ",x))
   }
 }
 
 CalentarSarten <- function(){
-  return("sartén caliente")
+  return("sartÃ©n caliente")
 }
 
 Servir <- function(x,y,z,j){
   if((x=="pan tostado con palta" && y=="panqueques con manjar" && z=="jugo de naranjas" && j=="cafe caliente")){
-    return("mmmmm... niami... el desayuno está maravilloso")
+    return("mmmmm... niami... el desayuno estÃ¡ maravilloso")
   }else{
-    return("iiiuuuu... esto no está listo")
+    return("iiiuuuu... esto no estÃ¡ listo")
   }
 }
+#Lista de acciones
+Cortar("pan")
+Cortar("palta")
+Cortar("naranjas")
+Calentar("cafe")
+Calentar("pan cortado")
+Moler("palta cortada")
+Preparar("naranjas cortadas")
+Preparar("harina","huevos")
+CalentarSarten(x)
+Preparar("masa de panqueques","sarten caliente")
+Preparar("pan tostado","palta molida")
+Rellenar("panqueques")
+Servir("pan tostado con palta","panqueques con manjar","jugo de naranjas","cafe caliente")
